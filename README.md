@@ -2,7 +2,7 @@
 
 Solves the Anderson Impurity model with one impurity site and Nb discrete bath sites in a star geometry for a total number of site Ns=1+Nb.
 
-<a href="https://github.com/L-F-A./img/StarGeometry.jpg" /></a>
+<a href="https://github.com/L-F-A/img/blob/master/StarGeometry.jpg" /></a>
 
 The Hamiltonian is:
 
