@@ -204,25 +204,3 @@ tic
      
 %toc;
 end
-
-% function num_non_H = count_non_zero(states_ket_ind,table,lig_states,Ns)
-% 
-% 
-% g = 0;
-% 
-%  
-% for ll = 1:lig_states
-%     
-%     ket = states_ket_ind(ll,1);
-%     ndu = bitget(ket,1);
-%     ndd = bitget(table(ket+1,3),1);
-%     
-%   if ( ndu ~= 0 ) || ( ndd ~=0 ) 
-%     ket_bin = table(ket+1,4);
-%     for r=2:Ns
-%       g = g + (( ndu + 2*bitget(ket_bin,2*Ns-2*r+2) ) == 1) + (  ( ndd + 2*bitget(ket_bin,2*Ns - 2*r + 1)  )   == 1);
-%     end
-%   end
-% end
-%   num_non_H = g;
-% end
