@@ -2,6 +2,10 @@
 
 Solves the Anderson Impurity model with one impurity site and Nb discrete bath sites in a star geometry for a total number of site Ns=1+Nb.
 
+![My image](L-F-A.github.com/repository/img/StarGeometry.jpg)
+
+The Hamiltonian is:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=H=\sum_{\sigma}\varepsilon_dd_{\sigma}^{\dagger}d_{\sigma}&plus;Ud_{\uparrow}^{\dagger}d_{\uparrow}d_{\downarrow}^{\dagger}d_{\downarrow}&plus;\sum_{i,\sigma}\varepsilon_ic_{i\sigma}^{\dagger}c_{i\sigma}&space;&plus;\sum_{i,\sigma}V_i\left(&space;d_{\sigma}^{\dagger}c_{i\sigma}&plus;c_{i\sigma}^{\dagger}d_{\sigma}\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H=\sum_{\sigma}\varepsilon_dd_{\sigma}^{\dagger}d_{\sigma}&plus;Ud_{\uparrow}^{\dagger}d_{\uparrow}d_{\downarrow}^{\dagger}d_{\downarrow}&plus;\sum_{i,\sigma}\varepsilon_ic_{i\sigma}^{\dagger}c_{i\sigma}&space;&plus;\sum_{i,\sigma}V_i\left(&space;d_{\sigma}^{\dagger}c_{i\sigma}&plus;c_{i\sigma}^{\dagger}d_{\sigma}\right&space;)" title="H=\sum_{\sigma}\varepsilon_dd_{\sigma}^{\dagger}d_{\sigma}+Ud_{\uparrow}^{\dagger}d_{\uparrow}d_{\downarrow}^{\dagger}d_{\downarrow}+\sum_{i,\sigma}\varepsilon_ic_{i\sigma}^{\dagger}c_{i\sigma} +\sum_{i,\sigma}V_i\left( d_{\sigma}^{\dagger}c_{i\sigma}+c_{i\sigma}^{\dagger}d_{\sigma}\right )" /></a>
 
 where 
