@@ -14,7 +14,9 @@ where
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=i=2\ldots&space;N_s&space;\quad&space;\text{and}&space;\quad&space;\sigma&space;=&space;\uparrow,\downarrow&space;\quad\text{the&space;possible&space;spin&space;directions.}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i=2\ldots&space;N_s&space;\quad&space;\text{and}&space;\quad&space;\sigma&space;=&space;\uparrow,\downarrow&space;\quad\text{the&space;possible&space;spin&space;directions.}" title="i=2\ldots N_s \quad \text{and} \quad \sigma = \uparrow,\downarrow \quad\text{the possible spin directions.}" /></a>
 
+The Hilbert space has 4^Ns basis vector. We choose the following convention to represent a basis vector
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\left|&space;n_{\uparrow}^d,n_{\downarrow}^d;n_{\uparrow}^2,n_{\downarrow}^2;n_{\uparrow}^3,n_{\downarrow}^3;\ldots;&space;n_{\uparrow}^{N_s},n_{\downarrow}^{N_s}&space;\right\rangle" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left|&space;n_{\uparrow}^d,n_{\downarrow}^d;n_{\uparrow}^2,n_{\downarrow}^2;n_{\uparrow}^3,n_{\downarrow}^3;\ldots;&space;n_{\uparrow}^{N_s},n_{\downarrow}^{N_s}&space;\right\rangle" title="\left| n_{\uparrow}^d,n_{\downarrow}^d;n_{\uparrow}^2,n_{\downarrow}^2;n_{\uparrow}^3,n_{\downarrow}^3;\ldots; n_{\uparrow}^{N_s},n_{\downarrow}^{N_s} \right\rangle" /></a>
 
   - More detailed explanations to come on the model, how to use the codes and cleaning the format of the codes that I never       bother to do. 
 
