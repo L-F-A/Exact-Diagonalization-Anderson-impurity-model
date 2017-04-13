@@ -2,11 +2,11 @@ function [an,bn2,ddplus] = cont_fract_coeff_G_dpluGS_final(Psi_GS,NSz_GS,C_ind,t
 
  nbr_coeff_cont = 800;
  for r_deg = 1:size(NSz_GS,1)
+ 
     Psi_GS_vec = Psi_GS{1,r_deg}; 
     N_elec_GS = NSz_GS(r_deg,1);
     Sz_GS = NSz_GS(r_deg,2);
-    
-    
+       
     %We isolate in C the states that are part of the GS
     C_GS_inter = C_ind{1,N_elec_GS+1};
     
@@ -20,8 +20,7 @@ function [an,bn2,ddplus] = cont_fract_coeff_G_dpluGS_final(Psi_GS,NSz_GS,C_ind,t
     C_f0_bin = bitset(table(C_f0(:,1)+1,4),2*Ns,1);
     C_f0(:,1) = table(C_f0_bin+1,5);
     C_f0(:,2) = C_f0(:,2) + 1;
-    
-    
+        
     C_Lanczos = C_ind{1,N_elec_GS+2};
     indice_Lanczos_basis = find(C_ind{1,N_elec_GS+2}(:,2)==(Sz_GS+1));
     C_Lanczos = C_Lanczos(indice_Lanczos_basis,:);
@@ -30,8 +29,8 @@ function [an,bn2,ddplus] = cont_fract_coeff_G_dpluGS_final(Psi_GS,NSz_GS,C_ind,t
     change_spin = find(diff(Sz_N)~=0)';
     nbr_change = length(change_spin);
     if nbr_change ~=0
-      hh = [change_spin(1:length(change_spin)) change_spin(length(change_spin))+1];
-      pos_spin_space = find(Sz_N(hh) == Sz_GS+1);
+       hh = [change_spin(1:length(change_spin)) change_spin(length(change_spin))+1];
+       pos_spin_space = find(Sz_N(hh) == Sz_GS+1);
     end
     
     
@@ -51,9 +50,9 @@ function [an,bn2,ddplus] = cont_fract_coeff_G_dpluGS_final(Psi_GS,NSz_GS,C_ind,t
         
     else
     
-    for r = 1:length(state_ind_f0) 
-        f0(find(state_ind_Lan == state_ind_f0(r))) = f01(r);
-    end
+        for r = 1:length(state_ind_f0) 
+           f0(find(state_ind_Lan == state_ind_f0(r))) = f01(r);
+        end
     
     fprintf('Size of Lanczos basis for sector d^dagger_up[%d\t%d]=[%d\t%d]: %d\n\n',N_elec_GS,Sz_GS,N_elec_GS+1,Sz_GS+1,length(indice_Lanczos_basis))
     
