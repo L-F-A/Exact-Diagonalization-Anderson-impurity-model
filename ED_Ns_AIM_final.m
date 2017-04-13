@@ -36,7 +36,7 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
         end
         
         if nbr_change == 0
-         tstart1 = tic;   
+         %tstart1 = tic;   
             %fprintf('\n\n Calculating sector N = %d and Sz = %d\n',r-1,Sz_N)
             %fprintf('This sector has 1 state\n')
              bin_num = table(C_ind{1,r}(1)+1,4);
@@ -58,7 +58,7 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
             Psi{1,r} = cell(1,nbr_change);
             
             for h = 1:nbr_change+1;
-            tstart1 = tic ;
+            %tstart1 = tic ;
                 
                 length_spins = length(find(Sz_N == Sz_N(hh(h))));
                 %fprintf('\n\nCalculating sector N = %d and Sz = %d\n',r-1,Sz_N(hh(h)))
