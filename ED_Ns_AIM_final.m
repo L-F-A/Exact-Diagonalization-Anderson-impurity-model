@@ -23,8 +23,6 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
     temps = tic;  
      for r = 1:Nb_sector
         
-        %f1 = size(C{1,r});
-        %Sz_N = C{1,r}(:,f1(2));
         
         Sz_N = C_ind{1,r}(:,2);
         change_spin = find(diff(Sz_N)~=0)';
@@ -66,20 +64,18 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
                 %fprintf('\n\nCalculating sector N = %d and Sz = %d\n',r-1,Sz_N(hh(h)))
                 %fprintf('This sector has %d states\n',length_spins)
                 
-                %states_ket = C{1,r}(1+split_spin_sec(h):length_spins+split_spin_sec(h),:);
+                
                 states_ket_ind = C_ind{1,r}(1+split_spin_sec(h):length_spins+split_spin_sec(h),:);
                 [lig_states,col_states] = size(states_ket_ind);
                 
                 nd_states = bitget(table(states_ket_ind(:,1)+1,4),2*Ns)+bitget(table(states_ket_ind(:,1)+1,4),2*Ns-1);
-                %nd_states = states_ket(:,1)+states_ket(:,2);
-                %D_states =   states_ket(:,1).*states_ket(:,2);
+                
                 D_states = bitget(table(states_ket_ind(:,1)+1,4),2*Ns).*bitget(table(states_ket_ind(:,1)+1,4),2*Ns-1);
                 nc_states = zeros(lig_states,Ns-1);
                 
                 nc_states(lig_states,Ns-1) = 0;
                 for oo = 1:(Ns-1)
                     nc_states(:,oo) = bitget(table(states_ket_ind(:,1)+1,4),2*Ns-2*oo)+bitget(table(states_ket_ind(:,1)+1,4),2*Ns-2*oo-1);
-                    %nc_states(:,oo) = states_ket(:,2*oo+1) + states_ket(:,2*oo+2); 
                 end
                 
                 diag_H = ed*nd_states + U*D_states + nc_states*ee';
@@ -88,7 +84,6 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
                 clear nc_states; 
                 if length_spins > 1
                     
-                %idx = lig + (col-1)*size(H,1);
                  lig_col_hij = H_non_zero_ele{1,r}{1,h};    
                  lig = lig_col_hij(2,:);
                  col = lig_col_hij(3,:);
@@ -171,7 +166,6 @@ function [E,EGS,Psi,Psi_GS,NSz_GS,Problem_mat] = ED_Ns_AIM_final(ed,U,ee,V,Ns,C_
          Sz_N_max = C_ind{1,new_N_deg+1}(1,2);
          dddd = length(Sz_N_max:-2:new_SZ);
          Psi_GS{1,r_psi} = Psi{1, new_N_deg+1}{1,dddd};
-         %Psi_GS(:,r_psi) = Psi{1, new_N_deg+1}{1,dddd};
          EGS(r_psi) = E{1,new_N_deg+1}{1,dddd};
          r_psi = r_psi+1;
      end
