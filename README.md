@@ -38,7 +38,7 @@ and equivalently for spin down.
 
   - More detailed explanations to come on the model, how to use the codes and cleaning the format of the codes that I never       bother to do. 
 
-  - While Ns=11 and Ns=12 are possible in principle (precompute the dictionary and save it), this pushes the capability very much. Ns=10 works pretty well on a desktop. For larger Ns such as 11, 12, 13, 14 (even the best implementation cannot go much larger) it does not make sense to use an implementation in Matlab or Python (this implementation could be slightly more efficient in the dictionnary for example, but I never bother pushing the efficiency to the extreme as alternative are available). Using one of the available c, c++ or Fortran implementations is suggested for Ns > 10. 
+  - While Ns=11 and Ns=12 are possible in principle (precompute the dictionary and save it), this pushes the capability very much. Ns=10 works pretty well on a desktop. For larger Ns such as 11, 12, 13, 14 (even the best implementation cannot go much larger) it does not make sense to use an implementation in Matlab or Python (this implementation could be slightly more efficient in the dictionnary for example, the convention could be simpler, but I never bother pushing the efficiency to the extreme as alternative are available). Using one of the available c, c++ or Fortran implementations is suggested for Ns > 10. 
   
   - However, even without explanation on the codes, if one has a value of Ns, values for all parameters of the Hamiltonian i.e. ed,U,e_2,V_2,...,e_Ns,V_Ns, a fictitious temperature T and a number of Matsubara frequencies Nmat, Every possible quantities for the model can be obtained by running:
 
